@@ -1,0 +1,59 @@
+# Raw and intermediate sequencing data
+data/
+basecalled/
+raw_data/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.sam
+*.bam
+*.bai
+*.cram
+*.crai
+*.pod5
+*.fast5
+
+# Generated results
+results/
+logs/
+figures/
+reports/
+manuscript_review/
+
+# Local databases and references
+databases/
+references/
+*.mmi
+*.bt2
+*.fai
+
+# Variant and alignment outputs
+*.vcf
+*.vcf.gz
+*.bcf
+*.gff
+*.gff3
+*.gbff
+*.embl
+*.fasta
+*.fa
+*.fna
+*.faa
+*.ffn
+
+# Draft manuscripts and private documents
+*.docx
+*.xlsx
+*.pdf
+
+# Python/cache/system
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.DS_Store
+
+# Micromamba/local tools
+.tools/
+.micromamba/

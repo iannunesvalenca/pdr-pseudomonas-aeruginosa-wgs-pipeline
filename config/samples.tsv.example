@@ -1,0 +1,3 @@
+sample_id	barcode	filtered_fastq
+BC42	barcode42	data/reads/BC42.filtered.fastq.gz
+BC88	barcode88	data/reads/BC88.filtered.fastq.gz
