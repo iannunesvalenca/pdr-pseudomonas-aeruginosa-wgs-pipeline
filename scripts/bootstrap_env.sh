@@ -22,6 +22,11 @@ if [[ ! -x "${MICROMAMBA}" ]]; then
   tar -xjf "${TOOLS_DIR}/micromamba.tar.bz2" -C "${TOOLS_DIR}" bin/micromamba
 fi
 
+if [[ ! -f "${ENV_FILE}" ]]; then
+  echo "Environment specification not found: ${ENV_FILE}" >&2
+  exit 1
+fi
+
 echo "Creating/updating environment from ${ENV_FILE}"
 "${MICROMAMBA}" env create \
   --yes \
@@ -38,7 +43,7 @@ Activate it with:
   micromamba activate pdr-pa-wgs
 
 Quick check:
-  snakemake --version
+  scripts/check_envs.sh
   flye --version
   medaka --version
 EOF
