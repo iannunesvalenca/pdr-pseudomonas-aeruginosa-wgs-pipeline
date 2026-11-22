@@ -1,57 +1,50 @@
 # PDR Pseudomonas aeruginosa Nanopore WGS Pipeline
 
-Public-ready analysis pipeline for paired Oxford Nanopore bacterial whole-genome
-sequencing data from *Pseudomonas aeruginosa* isolates.
+Analysis pipeline for paired Oxford Nanopore whole-genome sequencing data from *Pseudomonas aeruginosa* isolates.
 
-The repository contains the workflow scripts and documentation used for:
+The repository includes scripts and documentation for:
 
 - Nanopore read quality control
 - Flye assembly and Medaka polishing
 - QUAST assembly QC
 - MLST typing
 - AMR gene and mutation screening with AMRFinderPlus and Abricate
-- targeted `crpP` confirmation
+- Targeted `crpP` confirmation
 - VFDB virulence profiling
 - Bakta annotation
 - IntegronFinder analysis
-- candidate SNP annotation and read-backed validation
-- manuscript-quality visualization scripts
+- Candidate SNP annotation and read-backed validation
+- Plotting scripts for figures
 
 ## Data Availability and Privacy
 
-No raw sequencing reads, BAM files, assemblies, databases, patient documents,
-draft manuscripts, or generated analysis results are included in this public
-repository. The scripts expect users to provide their own input files locally.
+No raw reads, BAM files, assemblies, databases, patient documents, draft manuscripts, or analysis outputs are stored in this repository. Provide your own input files locally.
 
-Large or sensitive files should remain outside git or in ignored directories
-such as `data/`, `results/`, `logs/`, `references/`, and `databases/`.
+Keep large or sensitive files outside git or inside ignored directories (`data/`, `results/`, `logs/`, `references/`, and `databases/`).
 
 ## Repository Layout
 
 ```text
-scripts/              Pipeline and visualization scripts
-docs/                 Setup and workflow documentation
-config/               Example sample and path configuration files
-envs/                 Environment notes
+scripts/              Pipeline and plotting scripts
+docs/                 Setup and workflow guides
+config/               Example sample and path configs
+envs/                 Environment specs and notes
 ```
 
 ## Quick Start
 
 1. Install micromamba.
-2. Create the environments described in `docs/environment_setup.md`.
-3. Place input FASTQ files in a local, ignored `data/` directory.
-4. Adapt `config/samples.tsv.example` for the local sample names and paths.
-5. Run the scripts in the order described in `docs/workflow.md`.
+2. Create the environments listed in `docs/environment_setup.md` (or run `scripts/bootstrap_env.sh` for the core `pdr-pa-wgs` environment).
+3. Put input FASTQ files in a local `data/` directory.
+4. Copy and edit `config/samples.tsv.example` for your sample names and paths.
+5. Run the scripts in the order shown in `docs/workflow.md`.
 
-## Important Notes
+## Notes
 
-The scripts were developed for a two-isolate comparative analysis and currently
-use the sample labels `BC42` and `BC88` in several places. Treat these labels as
-template values and adjust them for new datasets before reuse.
+These scripts were written for a two-isolate comparison and use `BC42` and `BC88` as sample labels in several files. Treat those names as placeholders and update them for new datasets.
 
-The repository is intended to make the analysis approach reproducible. It is not
-a data release.
+This repository shares the analysis workflow for reproducibility. It does not release sequencing data.
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE).
+MIT. See [`LICENSE`](LICENSE).
