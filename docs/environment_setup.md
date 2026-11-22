@@ -33,6 +33,36 @@ micromamba create -y -n pdr-pa-amr \
   abricate ncbi-amrfinderplus blast
 ```
 
+Additional tool-specific environments used by optional/downstream scripts:
+
+```bash
+# MLST typing (scripts/run_mlst.sh)
+micromamba create -y -n pdr-pa-typing \
+  -c conda-forge -c bioconda --strict-channel-priority \
+  mlst
+
+# IntegronFinder (scripts/run_integronfinder.sh)
+micromamba create -y -n pdr-pa-mobile \
+  -c conda-forge -c bioconda --strict-channel-priority \
+  integron_finder
+
+# Bakta genome annotation (scripts/run_bakta_annotation.sh)
+micromamba create -y -n pdr-pa-bakta \
+  -c conda-forge -c bioconda --strict-channel-priority \
+  bakta
+
+# Core SNP comparison (scripts/run_snippy_ctgs.sh)
+micromamba create -y -n pdr-pa-snippy \
+  -c conda-forge -c bioconda --strict-channel-priority \
+  snippy snp-dists
+```
+
+You can also bootstrap `pdr-pa-wgs` directly from `envs/pdr-pa-wgs.yml`:
+
+```bash
+scripts/bootstrap_env.sh
+```
+
 ## Activation
 
 From the project directory:

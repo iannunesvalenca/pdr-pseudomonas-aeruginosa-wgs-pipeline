@@ -51,3 +51,7 @@ template values and adjust them for new datasets before reuse.
 
 The repository is intended to make the analysis approach reproducible. It is not
 a data release.
+
+## License
+
+MIT — see [`LICENSE`](LICENSE).

@@ -1,0 +1,30 @@
+name: pdr-pa-wgs
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - pandas
+  - biopython
+  - matplotlib
+  - seaborn
+  - openpyxl
+  - python-docx
+  - seqkit
+  - nanoq
+  - nanoplot
+  - chopper
+  - filtlong
+  - samtools>=1.20
+  - htslib>=1.20
+  - bcftools>=1.20
+  - minimap2
+  - flye
+  - raven-assembler
+  - racon
+  - medaka
+  - quast
+  - fastani
+  - mash
+  - mlst
+  - blast
